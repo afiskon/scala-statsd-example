@@ -15,7 +15,7 @@ object StatsDClientExample extends App {
     client.incrementCounter("test.counter", inc)
     client.recordTime("test.time", time)
     client.recordValue("test.value", value)
-    recordTime("thread.sleep.future") { Future { Thread.sleep(100) } }
+    recordTimeF("thread.sleep.future") { Future { Thread.sleep(100) } }
     recordTime("thread.sleep") { Thread.sleep(100) }
   }
 }
